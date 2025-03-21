@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'deface', '~> 1.0'
   s.add_dependency 'spree_core', '>= 3.7.0'
 
   s.add_development_dependency 'spree_dev_tools'
