@@ -4,10 +4,10 @@ module Spree
       module Storefront
         class ContactsController < Spree::Api::V2::ResourceController
           def create
-            @contact = Spree::ContactUs::Contact.new(contact_us_params)
+            @contact = Spree::Contact.new(contact_params)
 
             if @contact.save
-              render json: { message: "Contact Us submitted successfully!"}, status: :ok
+              render json: { message: Spree.t('spree_contact_us.message_sent')}, status: :ok
             else
               render json: { errors: @contact.errors.full_messages }, status: :unprocessable_entity
             end
@@ -15,8 +15,8 @@ module Spree
 
           private
 
-          def contact_us_params
-            params.require(:contact_us_contact).permit(:email, :message, :name, :subject, :phone)
+          def contact_params
+            params.require(:contact).permit(:email, :message, :name, :subject, :phone)
           end
         end
       end
