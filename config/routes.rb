@@ -10,4 +10,8 @@ Spree::Core::Engine.add_routes do
       end
     end
   end
+
+  namespace :admin do
+    resources :contacts, only: :index
+  end
 end

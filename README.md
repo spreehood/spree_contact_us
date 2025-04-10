@@ -81,6 +81,23 @@ Be sure to bundle your dependencies and then create a dummy test app for the spe
   bundle exec rspec spec
   ```
 
+## APIs
+
+- POST `/api/v2/storefront/contacts` - submit the contact us form details
+
+  payload:
+  ```json
+  {
+    "contact": {
+        "name": "User Name",
+        "email": "user@example.com",
+        "message": "This is a message",
+        "phone": "9800112233",
+        "subject": "This is subject"
+    }
+  }
+  ```
+
 ## TODO
 
 * Modify settings within the admin

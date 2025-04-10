@@ -28,3 +28,9 @@ en:
       message_placeholder: Message
       notices:
         success: "Contact email was successfully sent."
+      contacts: Contacts
+      email: Email
+      phone: Phone
+      message: Message
+      subject: Subject
+      message_sent: Message sent successfully!
